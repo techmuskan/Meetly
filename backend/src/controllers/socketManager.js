@@ -1,8 +1,11 @@
-import {Server} from "Socker.io";
+import { Server } from "socket.io";
 
-const connectToSocket = (server) =>{
-    const io = new Server(server);
-    return io;
-}
+export const connectToSocket = (server) => {
+  const io = new Server(server, {
+    cors: {
+      origin: "*",
+    },
+  });
 
-export default connectToSocket;
+  return io;
+};
