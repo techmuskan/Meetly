@@ -1,5 +1,6 @@
 import React from 'react'
 import "../App.css"
+import { Link } from 'react-router-dom'
 
 const landing = () => {
   return (<>
@@ -21,7 +22,9 @@ const landing = () => {
         <h2><span>Connect</span> with your</h2>
         <h2>Loved Ones</h2>
         <p>Cover a distance by SyncView</p>
-        <div role='button'>Get Started</div>
+        <div>
+          <Link role='button' to="/home">Get Started</Link>
+        </div>
       </div>
       <div className="mainRight">
         <img src="../public/right.jpg" alt="" />

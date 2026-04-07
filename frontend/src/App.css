@@ -6,12 +6,12 @@
 .landingPageContainer{
   width: 100vw;
   height: 100vh;
-  background: url(../public/bg.jpg);
+  /* background: url(../public/bg.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
 }
 .landingPageContainer nav{
-  padding-inline: 1.2rem;
+  padding-inline: 6rem;
   padding-block: 1.6rem;
   display: flex;
   justify-content: space-between;
@@ -25,16 +25,22 @@
   display: flex;
   gap: 2rem;
   cursor: pointer;
+  align-items: center;
 }
+.navList div[role='button']{
+  padding: 0.8rem 1.6rem;
+  background-color: orange;
+  color: white;
+  border-radius: 0.4rem;
+} 
 .landingPageContainer .mainContent{
   display: flex;
   align-items: center;
-  padding-inline: 1.2rem;
   padding-block: 1.6rem;
 }
 .landingPageContainer .mainContent .mainLeft{
   width: 50vw;
-  
+  padding-left: 6rem;
 }
 .landingPageContainer .mainContent .mainLeft h2{
  font-size: 3rem;
@@ -49,6 +55,12 @@
 .landingPageContainer .mainContent .mainLeft div{
   padding-block: 1.6rem;
   cursor: pointer;
+}
+.mainLeft div a{
+  padding: 0.8rem 1.6rem;
+  background-color: orange;
+  color: white;
+  border-radius: 0.4rem;
 }
 .landingPageContainer .mainContent .mainRight img{
   height: 500px;
