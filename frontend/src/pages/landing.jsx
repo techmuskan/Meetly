@@ -23,7 +23,7 @@ const landing = () => {
         <h2>Loved Ones</h2>
         <p>Cover a distance by SyncView</p>
         <div>
-          <Link role='button' to="/home">Get Started</Link>
+          <Link role='button' to="/auth">Get Started</Link>
         </div>
       </div>
       <div className="mainRight">

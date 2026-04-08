@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/landing'
+import Authentication from './pages/authentication'
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
 <Router>
   <Routes>
     <Route path="/" element={<LandingPage />} />
+    <Route path="/auth" element={<Authentication />} />
   </Routes>
 </Router>
 
