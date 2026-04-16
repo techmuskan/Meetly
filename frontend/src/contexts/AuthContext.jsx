@@ -1,38 +1,48 @@
-import axios, { HttpStatusCode } from "axios";
-import {createContext, use, useContext} from "react";
-import { useNavigate } from "react-router-dom";
-
-export const AuthContext = createContext();
+import * as React from "react";
+import axios from "axios";
+import { HttpStatusCode } from "axios";
+import { AuthContext } from "./AuthContextValue";
 
 const client = axios.create({
-  baseURL: "http://localhost:8000/api/v1/users",
-  withCredentials: true,
+  baseURL: "http://localhost:8000/api/v1/users/",
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
-export const AuthProvider = ({children}) => {
-    const authContext = useContext(AuthContext);
+export const AuthProvider = ({ children }) => {
+  const [userData, setUserData] = React.useState(() => {
+    const stored = localStorage.getItem("user");
+    return stored ? JSON.parse(stored) : null;
+  });
 
-    const [userData, setUserData] = useState(authContext);
+  const handleLogin = async (username, password) => {
+    const response = await client.post("http://localhost:8000/api/v1/users/login", { username, password });
 
-    const handleRegister = async (username, name, password) => {
-        try {
-            const response = await client.post("/register", {
-                username,
-                name,
-                password,
-            });
-            if(response.status===HttpStatusCode.Created){
-                setUserData(response.data);
-                router("/dashboard");
-            }
-        } catch (error) {
-            console.error("Registration failed:", error);
-        }
-    };
+    if (response.status === HttpStatusCode.Ok) {
+    const token = response?.data?.token;
+    const user = { username, token };
+    setUserData(user);
+    localStorage.setItem("user", JSON.stringify(user));
+  }
 
-    const router = useNavigate();
+  return response?.data;
+  };
 
-    const data = {
-        userData, setUserData
-    } 
-}
+  const handleRegister = async (username, name, password) => {
+    const response = await client.post("http://localhost:8000/api/v1/users/register", { username, name, password });
+    return response?.data?.message;
+  };
+
+  const handleLogout = () => {
+    setUserData(null);
+    localStorage.removeItem("user");
+  };
+
+  const value = React.useMemo(
+    () => ({ userData, handleLogin, handleRegister, handleLogout }),
+    [userData],
+  );
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+};

@@ -12,6 +12,7 @@ const server = createServer(app);
 const io = connectToSocket(server);
 
 app.set("port", process.env.PORT || 8000);
+app.use((req, res, next) => { console.log(`${req.method} ${req.url}`); next(); });
 
 // Middleware
 app.use(cors());
@@ -19,7 +20,8 @@ app.use(express.json({ limit: "40kb" }));
 app.use(express.urlencoded({ limit: "40kb", extended: true }))
 
 // Routes
-app.use("/api/users", userRoutes);
+app.use("/api/v1/users/", userRoutes);
+
 
 const start = async () => {
   try {
@@ -30,7 +32,7 @@ const start = async () => {
     console.log(`Mongoose connected: ${connectionDB.connection.host}`);
 
     server.listen(app.get("port"), () => {
-      console.log(`Server running on port ${app.get("port")}`);
+      console.log(`Server chl rha h espe ${app.get("port")}`);
     });
 
   } catch (error) {

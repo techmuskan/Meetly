@@ -13,15 +13,17 @@ const login = async (req, res) => {
   try {
     const user = await User.findOne({ username });
     if (!user) {
-      return res.status(httpStatus.BAD_REQUEST).json({ message: "Invalid username or password" });
+      return res.status(httpStatus.NOT_FOUND).json({ message: "User not found" });
     } 
-    if(bycrypt.compareSync(password, user.password)) {
+
+    let isMatch = await bycrypt.compareSync(password, user.password);
+    if(isMatch) {
       const token = crpto.randomBytes(16).toString("hex");
       user.token = token;
       await user.save();
       res.status(httpStatus.OK).json({ message: `Login successful: ${token}`, token });
     } else {
-      res.status(httpStatus.BAD_REQUEST).json({ message: "Invalid username or password" });
+      res.status(httpStatus.UNAUTHORIZED).json({ message: "Invalid username or password" });
     }
   } catch (error) {
     res
