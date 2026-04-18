@@ -1,10 +1,10 @@
-# 📱 FaceTime App
+# FaceTime App
 
 A simple video calling application that allows users to connect with friends, family, or colleagues in real-time. Built with a focus on **clarity, usability, and seamless communication**.
 
 ---
 
-## 🚀 Features
+## Features
 - **One-to-One Video Calls** – Connect instantly with another user.
 - **Audio Calls** – Switch to audio-only mode for low bandwidth.
 - **User Authentication** – Secure login with email or phone number.
@@ -13,7 +13,7 @@ A simple video calling application that allows users to connect with friends, fa
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Frontend:** React 
 - **Backend:** Node.js, Express  
 - **Database:** MongoDB / SQL  
@@ -22,7 +22,7 @@ A simple video calling application that allows users to connect with friends, fa
 
 ---
 
-## 📦 Installation
+## Installation
 ```bash
 # Clone the repository
 git clone https://github.com/your-username/facetime-app.git
@@ -39,7 +39,7 @@ npm start
 
 ---
 
-## 📖 Usage
+## Usage
 1. Sign up or log in with your account.  
 2. Add contacts using their username or email.  
 3. Tap on a contact to start a video or audio call.  
@@ -47,7 +47,7 @@ npm start
 
 ---
 
-## 🤝 Contributing
+## Contributing
 Contributions are welcome!  
 - Fork the repo  
 - Create a new branch (`feature/your-feature`)  
