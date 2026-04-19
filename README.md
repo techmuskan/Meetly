@@ -46,13 +46,3 @@ npm start
 4. Enjoy real-time communication with clear video and audio.  
 
 ---
-
-## Contributing
-Contributions are welcome!  
-- Fork the repo  
-- Create a new branch (`feature/your-feature`)  
-- Commit changes  
-- Open a pull request  
-
----
-
