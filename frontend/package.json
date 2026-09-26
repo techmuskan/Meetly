@@ -14,7 +14,6 @@
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^9.0.0",
     "@mui/material": "^9.0.0",
-    "@rolldown/binding-win32-x64-msvc": "^1.0.0-rc.12",
     "axios": "^1.15.0",
     "http-status": "^2.1.0",
     "http-status-codes": "^2.3.0",
