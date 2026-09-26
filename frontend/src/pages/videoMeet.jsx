@@ -6,7 +6,7 @@ import styles from "../styles/videoComponent.module.css";
 
 const peerConfig = { iceServers: [{ urls: "stun:stun.l.google.com:19302" }] };
 
-export default function VideoMeetComponent() {
+export default function videoMeetComponent() {
   const { url: roomId } = useParams(), navigate = useNavigate();
   const savedUser = JSON.parse(localStorage.getItem("meetly_user") || "{}");
   const [name, setName] = useState(savedUser.name || ""), [inRoom, setInRoom] = useState(false), [stream, setStream] = useState(null), [remoteVideos, setRemoteVideos] = useState([]), [cameraOn, setCameraOn] = useState(true), [micOn, setMicOn] = useState(true), [chatOpen, setChatOpen] = useState(true), [message, setMessage] = useState(""), [messages, setMessages] = useState([]), [error, setError] = useState(""), [sharing, setSharing] = useState(false);
