@@ -28,7 +28,7 @@ A simple video calling application that allows users to connect with friends, fa
 3. Tap on a contact to start a video or audio call.  
 4. Enjoy real-time communication with clear video and audio.  
 
----~
+---
 
 ## Future Scope
 
