@@ -1,16 +1,194 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../App.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../App.css";
 
 const Arrow = () => <span className="arrow">→</span>;
 
 export default function LandingPage() {
-  return <main className="saas-page">
-    <nav className="saas-nav"><Link className="brand" to="/"><span className="brand-mark"><i /><i /><i /></span>Meetly</Link><div className="nav-links"><a href="#features">Product</a><a href="#how-it-works">How it works</a><a href="#pricing">Pricing</a></div><div className="nav-actions"><Link className="login-link" to="/auth">Log in</Link><Link className="button button-dark button-small" to="/auth">Start for free <Arrow /></Link></div></nav>
-    <section className="hero"><div className="announcement"><span>New</span> AI meeting notes are here <Arrow /></div><h1>Meet better.<br /><em>Move faster.</em></h1><p className="hero-copy">A beautifully simple workspace for video meetings, team collaboration, and the decisions that move work forward.</p><div className="hero-actions"><Link className="button button-accent" to="/auth">Start for free <Arrow /></Link><a className="text-button" href="#how-it-works"><span className="play-icon">▶</span> See how it works</a></div><p className="microcopy">No credit card required · Free for up to 10 teammates</p>
-      <div className="product-preview"><div className="preview-topbar"><span className="preview-logo"><b /> meetly</span><span className="preview-search">⌕ &nbsp; Search anything</span><div className="avatar-stack"><span>J</span><span>M</span><span>A</span></div></div><aside className="preview-sidebar"><div className="side-label">WORKSPACE</div><div className="side-item active">▦ &nbsp; Overview</div><div className="side-item">▣ &nbsp; Meetings</div><div className="side-item">◷ &nbsp; Recordings</div><div className="side-item">✦ &nbsp; AI notes</div><div className="side-label team-label">YOUR TEAMS</div><div className="side-item">● &nbsp; Product</div><div className="side-item">● &nbsp; Marketing</div></aside><section className="preview-content"><div className="preview-heading"><div><p>Tuesday, March 18</p><h2>Good morning, Alex <span>✦</span></h2></div><button>+ New meeting</button></div><div className="meeting-card"><div className="meeting-icon">◉</div><div><small>UP NEXT · IN 25 MIN</small><h3>Product weekly sync</h3><p>9:30 – 10:00 AM · Product team</p></div><button className="join-button">Join meeting <Arrow /></button></div><div className="overview-grid"><div className="mini-card"><small>MEETINGS THIS WEEK</small><strong>12</strong><span className="positive">↑ 20% from last week</span><div className="bars"><i /><i /><i /><i /><i /><i /><i /></div></div><div className="mini-card"><small>TIME SAVED WITH AI</small><strong>4.5 <b>hrs</b></strong><span>Across 9 meeting summaries</span><div className="sparkline">⌁</div></div><div className="notes-card"><small>LATEST NOTES</small><p><b>Design critique</b><br />3 action items created</p><p><b>Customer interview</b><br />Summary ready to review</p></div></div></section></div>
-      <p className="trusted">TRUSTED BY TEAMS THAT CARE ABOUT THEIR TIME</p><div className="logos"><span>vertex</span><span>◇ northstar</span><span>loomly</span><span>Layers</span><span>amplitude</span></div></section>
-    <section className="feature-section" id="features"><p className="eyebrow">ONE PLACE FOR EVERY CONVERSATION</p><h2>More momentum, less meeting fatigue.</h2><p>Everything your team needs to have meaningful conversations and turn them into action.</p><div className="feature-grid"><article><div className="feature-icon purple">◌</div><h3>Crystal-clear calls</h3><p>Reliable HD video built to feel natural, wherever work takes you.</p></article><article><div className="feature-icon orange">✦</div><h3>Notes that write themselves</h3><p>Get searchable summaries, decisions, and action items after every call.</p></article><article><div className="feature-icon green">↗</div><h3>Built for your flow</h3><p>Bring your tools together and keep everyone in the loop.</p></article></div></section>
-    <section className="simple-section" id="how-it-works"><p className="eyebrow">SIMPLE BY DESIGN</p><h2>From hello to helpful in seconds.</h2><Link className="button button-dark" to="/auth">Create your workspace <Arrow /></Link></section><section className="pricing-section" id="pricing"><p className="eyebrow">FLEXIBLE PRICING</p><h2>Start free. Scale when you’re ready.</h2><p>Everything you need for better meetings, with room to grow.</p></section><footer>© 2026 Meetly, Inc. <span>Made for teams who value their time.</span></footer>
-  </main>;
+  return (
+    <main className="saas-page">
+      <nav className="saas-nav">
+        <Link className="brand" to="/">
+          <span className="brand-mark">
+            <i />
+            <i />
+            <i />
+          </span>
+          Meetly
+        </Link>
+        <div className="nav-links">
+          <a href="#features">Product</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+        <div className="nav-actions">
+          <Link className="login-link" to="/auth">
+            Log in
+          </Link>
+          <Link className="button button-dark button-small" to="/auth">
+            Start for free <Arrow />
+          </Link>
+        </div>
+      </nav>
+      <section className="hero">
+        <div className="announcement">
+          <span>New</span> AI meeting notes are here <Arrow />
+        </div>
+        <h1>
+          Meet better.
+          <br />
+          <em>Move faster.</em>
+        </h1>
+        <p className="hero-copy">
+          A beautifully simple workspace for video meetings, team collaboration,
+          and the decisions that move work forward.
+        </p>
+        <div className="hero-actions">
+          <Link className="button button-accent" to="/auth">
+            Start for free <Arrow />
+          </Link>
+          <a className="text-button" href="#how-it-works">
+            <span className="play-icon">▶</span> See how it works
+          </a>
+        </div>
+        <p className="microcopy">
+          No credit card required · Free for up to 10 teammates
+        </p>
+        <div className="product-preview">
+          <div className="preview-topbar">
+            <span className="preview-logo">
+              <b /> meetly
+            </span>
+            <span className="preview-search">⌕ &nbsp; Search anything</span>
+            <div className="avatar-stack">
+              <span>J</span>
+              <span>M</span>
+              <span>A</span>
+            </div>
+          </div>
+          <aside className="preview-sidebar">
+            <div className="side-label">WORKSPACE</div>
+            <div className="side-item active">▦ &nbsp; Overview</div>
+            <div className="side-item">▣ &nbsp; Meetings</div>
+            <div className="side-item">◷ &nbsp; Recordings</div>
+            <div className="side-item">✦ &nbsp; AI notes</div>
+            <div className="side-label team-label">YOUR TEAMS</div>
+            <div className="side-item">● &nbsp; Product</div>
+            <div className="side-item">● &nbsp; Marketing</div>
+          </aside>
+          <section className="preview-content">
+            <div className="preview-heading">
+              <div>
+                <p>Tuesday, March 18</p>
+                <h2>
+                  Good morning, Alex <span>✦</span>
+                </h2>
+              </div>
+              <button>+ New meeting</button>
+            </div>
+            <div className="meeting-card">
+              <div className="meeting-icon">◉</div>
+              <div>
+                <small>UP NEXT · IN 25 MIN</small>
+                <h3>Product weekly sync</h3>
+                <p>9:30 – 10:00 AM · Product team</p>
+              </div>
+              <button className="join-button">
+                Join meeting <Arrow />
+              </button>
+            </div>
+            <div className="overview-grid">
+              <div className="mini-card">
+                <small>MEETINGS THIS WEEK</small>
+                <strong>12</strong>
+                <span className="positive">↑ 20% from last week</span>
+                <div className="bars">
+                  <i />
+                  <i />
+                  <i />
+                  <i />
+                  <i />
+                  <i />
+                  <i />
+                </div>
+              </div>
+              <div className="mini-card">
+                <small>TIME SAVED WITH AI</small>
+                <strong>
+                  4.5 <b>hrs</b>
+                </strong>
+                <span>Across 9 meeting summaries</span>
+                <div className="sparkline">⌁</div>
+              </div>
+              <div className="notes-card">
+                <small>LATEST NOTES</small>
+                <p>
+                  <b>Design critique</b>
+                  <br />3 action items created
+                </p>
+                <p>
+                  <b>Customer interview</b>
+                  <br />
+                  Summary ready to review
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <p className="trusted">TRUSTED BY TEAMS THAT CARE ABOUT THEIR TIME</p>
+        <div className="logos">
+          <span>vertex</span>
+          <span>◇ northstar</span>
+          <span>loomly</span>
+          <span>Layers</span>
+          <span>amplitude</span>
+        </div>
+      </section>
+      <section className="feature-section" id="features">
+        <p className="eyebrow">ONE PLACE FOR EVERY CONVERSATION</p>
+        <h2>More momentum, less meeting fatigue.</h2>
+        <p>
+          Everything your team needs to have meaningful conversations and turn
+          them into action.
+        </p>
+        <div className="feature-grid">
+          <article>
+            <div className="feature-icon purple">◌</div>
+            <h3>Crystal-clear calls</h3>
+            <p>
+              Reliable HD video built to feel natural, wherever work takes you.
+            </p>
+          </article>
+          <article>
+            <div className="feature-icon orange">✦</div>
+            <h3>Notes that write themselves</h3>
+            <p>
+              Get searchable summaries, decisions, and action items after every
+              call.
+            </p>
+          </article>
+          <article>
+            <div className="feature-icon green">↗</div>
+            <h3>Built for your flow</h3>
+            <p>Bring your tools together and keep everyone in the loop.</p>
+          </article>
+        </div>
+      </section>
+      <section className="simple-section" id="how-it-works">
+        <p className="eyebrow">SIMPLE BY DESIGN</p>
+        <h2>From hello to helpful in seconds.</h2>
+        <Link className="button button-dark" to="/auth">
+          Create your workspace <Arrow />
+        </Link>
+      </section>
+      <section className="pricing-section" id="pricing">
+        <p className="eyebrow">FLEXIBLE PRICING</p>
+        <h2>Start free. Scale when you’re ready.</h2>
+        <p>Everything you need for better meetings, with room to grow.</p>
+      </section>
+      <footer>
+        © 2026 Meetly, Inc. <span>Made for teams who value their time.</span>
+      </footer>
+    </main>
+  );
 }
